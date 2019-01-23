@@ -1,0 +1,134 @@
+// Fonts
+@import url("https://fonts.googleapis.com/css?family=Arvo") 
+@import url('https://fonts.googleapis.com/css?family=Open+Sans')
+
+
+
+// Variables
+$logo-font: 'Arvo'
+$default-font: 'Open Sans'
+
+body 
+  font-family: $default-font
+  background-color: #F8F8F8
+
+i 
+  color: #fff
+
+#logo
+  font-family: $logo-font
+
+.container
+  margin-top: 20px
+
+.navbar
+  border-radius: 10px
+
+  @keyframes topFadeOut
+    0% 
+      opacity: 0
+
+    75% 
+      opacity: 1
+
+    100% 
+      opacity: 1
+  
+.navbar
+  animation-name: topFadeOut
+  animation-duration: 5s
+
+
+.navbar-light .navbar-nav .nav-link 
+  font-size: 1rem
+  font-weight: bolder
+  text-transform: uppercase
+  letter-spacing: 2px
+  margin: 0 20px 0 20px
+  color: #000
+
+.navbar-light .navbar-nav .nav-link:hover
+  border-bottom: 1px solid black
+
+.navbar-nav a 
+  justify-content: center
+
+.header-image
+  position: absolute
+  top: 0
+  z-index: -1
+
+.motto
+  text-align: center
+  color: #fff
+  margin-top: 100px
+  letter-spacing: 15px
+  font-size: 0.2rem
+  text-transform: uppercase
+
+.motto
+  animation-name: topFadeOut
+  animation-duration: 9s
+
+
+.feedback h2
+  text-align: center
+  position: relative
+  top: 450px
+  text-transform: uppercase
+  letter-spacing: 5px
+
+.card-deck
+  position: relative
+  top: 470px
+  width: 1440px
+
+.card-body
+  box-shadow: 2px 2px #E0E0E0
+  transition: all .2s ease-in-out
+
+.card:hover
+  transform: scale(1.01)
+
+#card-1
+  margin-left: 100px
+
+#carouselExampleIndicators
+  position: relative
+  top: 500px
+  left: 6%
+  width: 60%
+
+.carousel-item img
+  height: 100%
+
+.social-media
+  background-color: #333
+  position: relative
+  top: 290px
+  left: 1000px
+  width: 420px
+
+.social-media .nav-item
+  font-size: 4rem
+  letter-spacing: 20px
+  transition: all .2s ease-in-out
+
+#fb-icon
+  padding-left: 30px 
+
+i:hover 
+  color: #007bff
+  transform: scale(1.2)
+
+
+.social-media h2
+  text-align: center
+  color: #fff
+  letter-spacing: 10px
+  text-transform: uppercase
+  padding-top: 30px
+
+.page-footer 
+  position: relative
+  top: 320px
