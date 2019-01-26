@@ -14,65 +14,79 @@
     @media screen and (min-width: 1171px)
         @content
 
-// iPad
-.landing-text h2 
-    position: relative
-    left: 25%
-    font-size: 3rem
+// iPhone 6/7/8
+@include mediaSm
+    #home
+        width: 10px
+    .landing-text h2
+        font-size: 5rem
+        font-weight: 700
+        color: red
 
-.landing-text h3 
-    font-size: 1rem
+    .landing-text h3
+        font-size: 1rem
 
-#social-media h3
-    font-size: 2rem
+    #social-media h3
+        font-size: 2rem
 
-.newsletter h3
-        font-size: 2.5rem
-        
-.newsletter p
-    margin-top: 100px
-    font-size: 1.3rem
-
-
-// Desktops & Laptops
-@include mediaLg
-    .landing-text h2 
-        position: absolute
-        left: 10%
-        font-size: 3rem
-        color: blue
-
-// Widescreens
-@include mediaXl
-    .landing-text h2 
-        position: relative
-        left: 193px
-
-    .about-us
-        font-size: 1.4rem
-
-    .img-fluid
-        position: relative
-        left: 193px
-
-    #social-media
-        width: 100%
-        height: 50%
-        padding: 50px 0
-        margin-top: 100px
-        background-color: #F8F8F8
-        p
-        padding-top: 100px
-        margin-top: 20px
-    #social-media .fab 
-        margin-top: 100px
+    #social-media .fab
+        font-size: 1rem
 
     .newsletter h3
+        font-size: 2rem
+
+    .newsletter p
+        margin-top: 100px
         font-size: 5rem
+
+    .email-box:hover > .tbox, .tbox:focus
+        width: 25%
+
+// iPad 
+@include mediaMd
+    .landing-text h2
+        font-size: 5rem
+        font-weight: 700
+        color: blue
+
+    .landing-text h3
+        font-size: 1rem
+
+    #social-media h3
+        font-size: 2rem
+
+    #social-media .fab
+        font-size: 5rem
+
+    .newsletter h3
+        font-size: 2rem
+
     .newsletter p
         margin-top: 100px
         font-size: 1.3rem
 
-    .ad-slide img
-        width: 100%
-        height: 500px
+    .email-box:hover > .tbox, .tbox:focus
+        width: 25%
+
+// iPad Pro
+@include mediaLg
+    .newsletter h3
+        font-size: 3rem
+
+    .newsletter p
+        margin-top: 100px
+        font-size: 1.5rem
+
+    .email-box:hover > .tbox, .tbox:focus
+        width: 25%
+// Widescreen
+@include mediaXl
+    .newsletter h3
+        font-size: 3rem
+
+    .newsletter p
+        margin-top: 100px
+        font-size: 1.5rem
+
+    .email-box:hover > .tbox, .tbox:focus
+        width: 10%
