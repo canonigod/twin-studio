@@ -1,28 +1,35 @@
 // Fonts
 @import url("https://fonts.googleapis.com/css?family=Arvo") 
-@import url('https://fonts.googleapis.com/css?family=Open+Sans')
+@import url('https://fonts.googleapis.com/css?family=Arimo')
 
 
 
 // Variables
 $logo-font: 'Arvo'
-$default-font: 'Open Sans'
+$default-font: 'Arimo'
 
 body 
   font-family: $default-font
-  background-color: #F8F8F8
+  color: #000
 
-i 
-  color: #fff
+body,html 
+  height: 100%
+  width: 100%
 
-#logo
-  font-family: $logo-font
+@media only screen and (max-device-width: 1366px)
+  .parallax
+    background-attachment: scroll
 
-.container
-  margin-top: 20px
+/* Menu */
 
 .navbar
   border-radius: 10px
+  text-transform: uppercase
+  background: rgba(0, 0, 0, .6)!important
+  width: 50%
+  margin: auto
+  animation-name: topFadeOut
+  animation-duration: 5s
 
   @keyframes topFadeOut
     0% 
@@ -34,101 +41,190 @@ i
     100% 
       opacity: 1
   
-.navbar
-  animation-name: topFadeOut
-  animation-duration: 5s
-
-
-.navbar-light .navbar-nav .nav-link 
+.navbar-brand h1 
   font-size: 1rem
-  font-weight: bolder
-  text-transform: uppercase
-  letter-spacing: 2px
-  margin: 0 20px 0 20px
-  color: #000
+  font-family: $logo-font
 
-.navbar-light .navbar-nav .nav-link:hover
-  border-bottom: 1px solid black
-
-.navbar-nav a 
-  justify-content: center
-
-.header-image
-  position: absolute
-  top: 0
-  z-index: -1
-
-.motto
-  text-align: center
+#navbarResponsive .nav-link
   color: #fff
-  margin-top: 100px
-  letter-spacing: 15px
-  font-size: 0.2rem
+
+/* Header */
+
+#home
+  background: url(https://cdn.pixabay.com/photo/2016/12/25/16/07/star-wars-1930227_960_720.jpg) no-repeat center center fixed 
+  display: table
+  height: 100%
+  position: relative
+  width: 50%
+  background-size: cover
+
+.landing-text
+  display: table-cell
+  vertical-align: middle
+  position: relative
+  left: 72%
+
+.landing-text h1 
+  font-size: 5rem
+  font-weight: 500
+  color: #000
+  font-family: $logo-font
+  span
+    color: #fff
+  overflow: hidden
+  animation: typing 3.5s steps(40, end),blink-caret .75s step-end
+    
+.span
+  border: 1px solid blue
+  width: 10%
+  margin: auto
+
+.landing-text h2
+  animation: pulse 5s
+  color: #000
+  position: relative
+  object-fit: contain
+  width: 50%
+  left: 35%
+
+/* FadeIn Effect */
+
+@keyframes pulse
+  0% 
+    opacity: 0
+
+  75%
+    opacity: 0
+
+  100% 
+    opacity: 1
+
+/* The typing effect */
+@keyframes typing 
+  from 
+    width: 0
+  to 
+    width: 100%
+
+/* The typewriter cursor effect */
+@keyframes blink-caret
+  from, to 
+    border-color: transparent
+  50% 
+    border-color: blue
+
+.padding 
+  padding: 80px 0
+
+/* Titles */
+
+.title::before
+  content: ''
+  background: #6133FF
+  height: 5px
+  width: 100px
+  margin-left: auto
+  margin-right: auto
+  display: block
+  transform: translateY(63px)
   text-transform: uppercase
 
-.motto
-  animation-name: topFadeOut
-  animation-duration: 9s
 
-
-.feedback h2
-  text-align: center
-  position: relative
-  top: 450px
+.title::after
+  content: ''
+  background: #6133FF
+  margin-left: auto
+  margin-right: auto
+  display: block
+  transform: translateY(63px)
   text-transform: uppercase
-  letter-spacing: 5px
+  opacity: 0
 
-.card-deck
-  position: relative
-  top: 470px
-  width: 1440px
 
-.card-body
-  box-shadow: 2px 2px #E0E0E0
-  transition: all .2s ease-in-out
-
-.card:hover
-  transform: scale(1.01)
-
-#card-1
-  margin-left: 100px
-
-#carouselExampleIndicators
+.ad-slide
   position: relative
   top: 500px
-  left: 6%
-  width: 60%
 
-.carousel-item img
-  height: 100%
+/* Feedback */
 
-.social-media
-  background-color: #333
-  position: relative
-  top: 290px
-  left: 1000px
-  width: 420px
+#feedback
+  margin: 100px 0 0 0
 
-.social-media .nav-item
-  font-size: 4rem
-  letter-spacing: 20px
-  transition: all .2s ease-in-out
+.feedback
+  border-left: 4px solid #6133FF
+  margin-top: 100px
+  margin-left: 10px
+  color: #696969
 
-#fb-icon
-  padding-left: 30px 
-
-i:hover 
-  color: #007bff
-  transform: scale(1.2)
-
-
-.social-media h2
-  text-align: center
-  color: #fff
+.title 
+  font-size: 2.5rem
   letter-spacing: 10px
   text-transform: uppercase
-  padding-top: 30px
 
-.page-footer 
-  position: relative
-  top: 320px
+.user-details
+  display: inline
+  font-size: 0.8rem
+
+/* Social Media */
+
+#social-media
+  padding: 50px 0
+  margin-top: 100px
+
+#social-media p
+  font-size: 36px
+  font-weight: 600
+
+.fab 
+  margin-top: 20px
+  transition: 0.5s
+  font-size: 4rem
+  padding: 10px 50px
+
+.fab:hover
+  transform: translateY(-10px)
+
+/* Newsletter */
+.newsletter
+  background: url(https://cdn.pixabay.com/photo/2015/12/01/15/43/black-1072366_960_720.jpg) no-repeat center
+  background-size: cover
+  width: 100%
+  padding: 50px 40px
+  text-align: center
+  color: #fff
+
+.newsletter p
+  max-width: 600px
+  margin: 40px auto
+  font-size: 15px
+  font-weight: 300
+
+.email-box
+  height: 40px
+  display: flex
+  justify-content: center
+
+.email-box i
+  background: #2f3542
+  width: 40px
+  line-height: 40px
+
+.tbox
+.btn
+  border: none
+  outline: none
+
+.tbox
+  width: 0
+  transition: 0.6s
+
+.email-box:hover > .tbox, .tbox:focus
+  width: 260px
+  padding: 0 10px
+
+.btn
+  background: #2f2542
+  color: #fff
+  padding: 0 10px
+  text-transform: uppercase
+  cursor: pointer

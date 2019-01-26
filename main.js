@@ -11,3 +11,8 @@ function scrollFunction() {
     nav.classList.remove("fixed-top");
   }
 }
+
+$(function() {
+  // $(document).ready shorthand
+  $(".monster").fadeIn("slow");
+});
