@@ -1,33 +1,205 @@
-/*
-Errno::EACCES: Permission denied @ unlink_internal - .sass-cache/c132fcb5bd4a6dfbc20f4b849b1dd469c20abea8/main.sassc
+@import url("https://fonts.googleapis.com/css?family=Arvo");
+@import url("https://fonts.googleapis.com/css?family=Arimo");
+body {
+  font-family: "Arimo";
+  color: #000; }
 
-Backtrace:
-/Library/Ruby/Gems/2.3.0/gems/sass-3.6.0/lib/sass/cache_stores/filesystem.rb:26:in `unlink'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.6.0/lib/sass/cache_stores/filesystem.rb:26:in `_retrieve'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.6.0/lib/sass/cache_stores/base.rb:63:in `retrieve'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.6.0/lib/sass/cache_stores/chain.rb:25:in `block in retrieve'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.6.0/lib/sass/cache_stores/chain.rb:24:in `each'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.6.0/lib/sass/cache_stores/chain.rb:24:in `each_with_index'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.6.0/lib/sass/cache_stores/chain.rb:24:in `retrieve'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.6.0/lib/sass/engine.rb:407:in `_to_tree'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.6.0/lib/sass/engine.rb:389:in `_render_with_sourcemap'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.6.0/lib/sass/engine.rb:307:in `render_with_sourcemap'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.6.0/lib/sass/plugin/compiler.rb:462:in `update_stylesheet'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.6.0/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.6.0/lib/sass/plugin/compiler.rb:209:in `each'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.6.0/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.6.0/lib/sass/plugin/compiler.rb:443:in `on_file_changed'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.6.0/lib/sass/plugin/compiler.rb:320:in `block in watch'
-/Library/Ruby/Gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/config.rb:23:in `call'
-/Library/Ruby/Gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:115:in `_process_changes'
-/Library/Ruby/Gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:19:in `block in loop_for'
-/Library/Ruby/Gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop'
-/Library/Ruby/Gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop_for'
-/Library/Ruby/Gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:84:in `_wait_for_changes'
-/Library/Ruby/Gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:42:in `block in setup'
-/Library/Ruby/Gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/internals/thread_pool.rb:6:in `block in add'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Errno::EACCES: Permission denied @ unlink_internal - .sass-cache/c132fcb5bd4a6dfbc20f4b849b1dd469c20abea8/main.sassc"; }
+body, html {
+  height: 100%;
+  width: 100%; }
+
+@media only screen and (max-device-width: 1366px) {
+  .parallax {
+    background-attachment: scroll; } }
+/* Menu */
+.navbar {
+  border-radius: 10px;
+  text-transform: uppercase;
+  background: rgba(0, 0, 0, 0.6) !important;
+  width: 50%;
+  margin: auto;
+  animation-name: topFadeOut;
+  animation-duration: 5s; }
+@keyframes topFadeOut {
+  0% {
+    opacity: 0; }
+  75% {
+    opacity: 1; }
+  100% {
+    opacity: 1; } }
+.navbar-brand h1 {
+  font-size: 1rem;
+  font-family: "Arvo"; }
+
+#navbarResponsive .nav-link {
+  color: #fff; }
+
+/* Header */
+#home {
+  background: url(https://cdn.pixabay.com/photo/2016/12/25/16/07/star-wars-1930227_960_720.jpg) no-repeat center center fixed;
+  display: table;
+  height: 100%;
+  position: relative;
+  width: 50%;
+  background-size: cover; }
+
+.landing-text {
+  display: table-cell;
+  vertical-align: middle;
+  position: relative;
+  left: 72%; }
+
+.landing-text h1 {
+  font-size: 5rem;
+  font-weight: 500;
+  color: #000;
+  font-family: "Arvo";
+  overflow: hidden;
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end; }
+  .landing-text h1 span {
+    color: #fff; }
+
+.span {
+  border: 1px solid blue;
+  width: 10%;
+  margin: auto; }
+
+.landing-text h2 {
+  animation: pulse 5s;
+  color: #000;
+  position: relative;
+  object-fit: contain;
+  width: 50%;
+  left: 35%; }
+
+/* FadeIn Effect */
+@keyframes pulse {
+  0% {
+    opacity: 0; }
+  75% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0; }
+  to {
+    width: 100%; } }
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent; }
+  50% {
+    border-color: blue; } }
+.padding {
+  padding: 80px 0; }
+
+/* Titles */
+.title::before {
+  content: "";
+  background: #6133FF;
+  height: 5px;
+  width: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  transform: translateY(63px);
+  text-transform: uppercase; }
+
+.title::after {
+  content: "";
+  background: #6133FF;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  transform: translateY(63px);
+  text-transform: uppercase;
+  opacity: 0; }
+
+.ad-slide {
+  position: relative;
+  top: 500px; }
+
+/* Feedback */
+#feedback {
+  margin: 100px 0 0 0; }
+
+.feedback {
+  border-left: 4px solid #6133FF;
+  margin-top: 100px;
+  margin-left: 10px;
+  color: #696969; }
+
+.title {
+  font-size: 2.5rem;
+  letter-spacing: 10px;
+  text-transform: uppercase; }
+
+.user-details {
+  display: inline;
+  font-size: 0.8rem; }
+
+/* Social Media */
+#social-media {
+  padding: 50px 0;
+  margin-top: 100px; }
+
+#social-media p {
+  font-size: 36px;
+  font-weight: 600; }
+
+.fab {
+  margin-top: 20px;
+  transition: 0.5s;
+  font-size: 4rem;
+  padding: 10px 50px; }
+
+.fab:hover {
+  transform: translateY(-10px); }
+
+/* Newsletter */
+.newsletter {
+  background: url(https://cdn.pixabay.com/photo/2015/12/01/15/43/black-1072366_960_720.jpg) no-repeat center;
+  background-size: cover;
+  width: 100%;
+  padding: 50px 40px;
+  text-align: center;
+  color: #fff; }
+
+.newsletter p {
+  max-width: 600px;
+  margin: 40px auto;
+  font-size: 15px;
+  font-weight: 300; }
+
+.email-box {
+  height: 40px;
+  display: flex;
+  justify-content: center; }
+
+.email-box i {
+  background: #2f3542;
+  width: 40px;
+  line-height: 40px; }
+
+.btn {
+  border: none;
+  outline: none; }
+
+.tbox {
+  width: 0;
+  transition: 0.6s; }
+
+.email-box:hover > .tbox, .tbox:focus {
+  width: 260px;
+  padding: 0 10px; }
+
+.btn {
+  background: #2f2542;
+  color: #fff;
+  padding: 0 10px;
+  text-transform: uppercase;
+  cursor: pointer; }
+
+/*# sourceMappingURL=main.css.map */
