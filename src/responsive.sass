@@ -15,29 +15,28 @@
         @content
 
 // iPhone 6/7/8
-@include mediaSm
-    #home
-        width: 10px
-    .landing-text h2
-        font-size: 5rem
+@media screen and (max-width: 375px) 
+    #home .landing-text h2
+        font-size: 4rem
         font-weight: 700
-        color: red
 
-    .landing-text h3
-        font-size: 1rem
+    #home .landing-text h3
+        font-size: 0.4rem
+        width: 100px
+        position: relative
+        left: -50px
 
-    #social-media h3
-        font-size: 2rem
+    #about-us, #feedback, #social-media, .newsletter, .ad-slide, #footer
+        width: 650px
 
+    #social-media h3:before
+        display: none
+        
     #social-media .fab
-        font-size: 1rem
-
-    .newsletter h3
-        font-size: 2rem
+        font-size: 3rem
 
     .newsletter p
-        margin-top: 100px
-        font-size: 5rem
+        display: inline
 
     .email-box:hover > .tbox, .tbox:focus
         width: 25%
