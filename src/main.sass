@@ -2,19 +2,26 @@
 @import url("https://fonts.googleapis.com/css?family=Arvo") 
 @import url('https://fonts.googleapis.com/css?family=Arimo')
 
+// Responsive
+
 // Variables
 $logo-font: 'Arvo'
 $default-font: 'Arimo'
 $span-color: #6133FF
-$default-color: red
+$background-color: #2f2542
+
 body 
   font-family: $default-font
   color: #000
   margin: 0px
+  
 
 body,html 
   height: 100%
   width: 100%
+
+h1 
+  font-family: $logo-font
 
 @media only screen and (max-device-width: 1366px)
   .parallax
@@ -43,10 +50,13 @@ body,html
   
 .navbar-brand h1 
   font-size: 1rem
-  font-family: $logo-font
 
 #navbarResponsive .nav-link
   color: #fff
+
+.nav-link:hover
+  border-bottom: 1px solid #6133FF
+  transform: translateY(-2px)
 
 /* Header */
 
@@ -64,7 +74,7 @@ body,html
   position: relative
   left: 72%
 
-.landing-text h1 
+.landing-text h2
   font-size: 5rem
   font-weight: 500
   color: #000
@@ -79,7 +89,7 @@ body,html
   width: 10%
   margin: auto
 
-.landing-text h2
+.landing-text h3
   animation: pulse 5s
   color: #000
   position: relative
@@ -153,6 +163,7 @@ body,html
   margin-top: 0
   width: 100%
   height: auto
+  color: #000
   background-color: #F8F8F8
 
 #about-us .title
@@ -163,8 +174,7 @@ body,html
   margin: auto
 
 .img-fluid
-  padding: 50px 0
-
+  padding: 50px 0px
 /* Feedback */
 
 #feedback
@@ -191,7 +201,7 @@ body,html
   font-size: 36px
   font-weight: 600
 
-.fab 
+#social-media .fab 
   margin-top: 20px
   transition: 0.5s
   font-size: 4rem
@@ -220,7 +230,8 @@ body,html
   z-index: -1
   width: 100%
   height: 100%
-  background: rgba(0,0,0,0.6)
+  background: #551A8B
+  opacity: 0.7
   
 .newsletter p
   max-width: 600px
@@ -234,7 +245,7 @@ body,html
   justify-content: center
 
 .email-box i
-  background: #2f3542
+  background: $background-color
   width: 40px
   line-height: 40px
 
@@ -252,11 +263,36 @@ body,html
   padding: 0 10px
 
 .btn
-  background: #2f2542
+  background: $background-color
   color: #fff
   padding: 0 10px
   text-transform: uppercase
   cursor: pointer
 
-.ad-slide
-  display: none
+/* Footer */
+.footer-box
+  padding: 20px
+
+.footer-box:last-child
+  position: relative
+  left: 25%
+
+#footer .fas
+  margin-right: 8px
+  font-size: 1.5rem
+  height: 40px
+  width: 40px
+  text-align: center
+  padding-top: 7px
+  border-radius: 2px
+
+hr 
+  background: #000
+
+.copyright
+  font-size: 0.9rem
+  margin: 0
+  padding-bottom: 20px
+  text-align: center
+
+@import 'responsive'
